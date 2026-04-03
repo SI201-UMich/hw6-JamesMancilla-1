@@ -8,7 +8,7 @@
 # Asked ChatGPT for help debugging and understanding the JSON structure
 #
 # Did your use of GenAI on this assignment align with your goals and guidelines in your Gen AI contract? If not, why?
-#
+# I used gen ai to help me write the functions and understand it i supplemented this process by constantly commenting what the functions do and each part to aiod the learning processs
 # --- ARGUMENTS & EXPECTED RETURN VALUES PROVIDED --- #
 # --- SEE INSTRUCTIONS FOR FULL DETAILS ON METHOD IMPLEMENTATION --- #
 
@@ -240,12 +240,12 @@ def recommend_breeds_in_same_group(breed_name, cache_file):
             "No group information available for '{breed_name}'."  (no group id)
             "No recommendations found based on '{breed_name}'."  (no other breeds in that group)
     """
-    cache = load_json(cache_file)
+    cache = load_json(cache_file) #here we laod our cached breed data from the JSON file into a dictionary
     if not cache:
-        return "No breed data found in cache."
+        return "No breed data found in cache." #check if its empty
     target_group_id = None
     # Find the target breed and its group ID
-    for breed_data in cache.values():
+    for breed_data in cache.values():   #here we are looping through all breeeds in the cache to find the target breed we get the breends name from the JSON and compare it and if we get a match we extract it
         try:
             name = breed_data["data"]["attributes"]["name"]
             if name.lower() == breed_name.lower():
