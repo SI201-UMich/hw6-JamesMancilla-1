@@ -161,9 +161,6 @@ def get_longest_lifespan_breed(cache_file):
         try:
             max_life = breed_data["data"]["attributes"]["life"]["max"]
             name = breed_data["data"]["attributes"]["name"]
-            # ✅ skip invalid types
-            if not isinstance(max_life, int):
-                continue
         except (KeyError, TypeError):
             continue  # Skip breeds with missing data
         # Check if this breed has a longer lifespan or tie-break alphabetically
@@ -177,8 +174,6 @@ def get_longest_lifespan_breed(cache_file):
     if longest_lifespan == -1 or breed_name is None:
         return "No breeds found"
     return (breed_name, longest_lifespan)
-
-
 
 
 def get_groups_above_cutoff(cutoff, cache_file):
