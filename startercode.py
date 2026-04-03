@@ -6,7 +6,7 @@
 # If you worked with generative AI also add a statement for how you used it.
 # e.g.:
 # Asked ChatGPT for help debugging and understanding the JSON structure
-#
+#I relied more heavily on AI this time as I just got through all my midterms and am currently sick but still trying to do the assignment so i can learn from it for the final project
 # Did your use of GenAI on this assignment align with your goals and guidelines in your Gen AI contract? If not, why?
 # I used gen ai to help me write the functions and understand it i supplemented this process by constantly commenting what the functions do and each part to aiod the learning processs
 # --- ARGUMENTS & EXPECTED RETURN VALUES PROVIDED --- #
